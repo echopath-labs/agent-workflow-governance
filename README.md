@@ -12,6 +12,8 @@ This repository provides a Codex-compatible skill that helps coding agents work
 with more discipline during real engineering changes. It is intended for teams
 using Codex, Claude Code, Cursor, Gemini CLI, or similar AI coding agents.
 
+This skill is a workflow guardrail, not a permanent memory layer.
+
 The skill focuses on workflow governance:
 
 ```text
@@ -152,10 +154,39 @@ then check git status and relevant durable records.
 
 More copy-ready prompts are available in [examples/](examples/).
 
-The skill is designed to be lightweight. It does not force every small question
-through a heavyweight process. It applies when the task affects code, config,
-durable decisions, future teammates, customer-facing behavior, or long-term
-project constraints.
+## Context Cost And Activation
+
+This skill is designed to be lightweight and mostly on-demand.
+
+The main `SKILL.md` is the only file that should be loaded by default when the
+skill is activated. Reference documents under `references/` and examples under
+`examples/` should be read only when they are relevant to the current task.
+
+Recommended usage:
+
+- Use on demand for non-trivial engineering tasks.
+- Do not enable it for every casual question or read-only conversation.
+- Prefer project/workspace-level installation when a team wants consistent
+  workflow behavior.
+- Use global installation only if you personally want this workflow discipline
+  across most coding projects.
+
+Suggested activation policy:
+
+- Default off for casual chat and read-only questions.
+- Activate for feature work, bug fixes, refactors, dependency upgrades, API
+  changes, configuration changes, and risky edits.
+- Activate when the task needs branch, git status, validation, risk review, or
+  handoff discipline.
+
+Approximate context cost:
+
+- Core skill entry: small.
+- Full reference set: moderate.
+- Examples: optional and should be loaded only when needed.
+
+This skill should not continuously occupy the model context unless explicitly
+invoked or configured by the user.
 
 ## Durable Record Selection
 
