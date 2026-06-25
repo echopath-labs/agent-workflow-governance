@@ -163,7 +163,7 @@ Skill 会引导 Agent 按以下顺序工作：
 
 如果仓库没有任何持久化记录系统，Agent 不应该静默初始化 OpenSpec、Spec Kit 或 ADR 目录。它应该先说明建议写到哪里、为什么写到那里，并等待用户确认。
 
-详细判断规则见 `references/durable-record-decision.md`。
+详细判断规则见 [references/durable-record-decision.md](references/durable-record-decision.md)。
 
 ## 适合 / 不适合
 
@@ -218,10 +218,10 @@ Codex Skill 列表和界面展示用的元数据。
 
 按需加载的参考资料：
 
-- `durable-record-decision.md`：判断是否需要持久化记录，以及记录归属。
-- `git-lifecycle.md`：分支、提交、合并和主分支对齐。
-- `impact-review.md`：已有行为影响检查。
-- `risk-and-context.md`：高风险操作和上下文较重任务的处理。
+- [durable-record-decision.md](references/durable-record-decision.md)：判断是否需要持久化记录，以及记录归属。
+- [git-lifecycle.md](references/git-lifecycle.md)：分支、提交、合并和主分支对齐。
+- [impact-review.md](references/impact-review.md)：已有行为影响检查。
+- [risk-and-context.md](references/risk-and-context.md)：高风险操作和上下文较重任务的处理。
 
 ## 开源边界
 

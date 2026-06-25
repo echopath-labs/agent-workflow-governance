@@ -175,7 +175,7 @@ OpenSpec, Spec Kit, or ADR directories. It should propose a target and reason,
 then wait for user confirmation.
 
 Detailed record-selection guidance lives in
-`references/durable-record-decision.md`.
+[references/durable-record-decision.md](references/durable-record-decision.md).
 
 ## Expected Agent Behavior
 
@@ -218,10 +218,10 @@ Optional UI metadata for OpenAI Codex skill lists and chips.
 Progressively loaded guidance. The agent should read only the reference needed
 for the current task:
 
-- `durable-record-decision.md`: durable record ownership and update decisions.
-- `git-lifecycle.md`: branch, commit, merge, and primary-branch hygiene.
-- `impact-review.md`: existing-behavior impact review.
-- `risk-and-context.md`: high-risk operations and context-heavy work.
+- [durable-record-decision.md](references/durable-record-decision.md): durable record ownership and update decisions.
+- [git-lifecycle.md](references/git-lifecycle.md): branch, commit, merge, and primary-branch hygiene.
+- [impact-review.md](references/impact-review.md): existing-behavior impact review.
+- [risk-and-context.md](references/risk-and-context.md): high-risk operations and context-heavy work.
 
 ## Compatibility
 
