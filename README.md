@@ -3,6 +3,8 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Skill](https://img.shields.io/badge/skill-Codex%20Skill-111827.svg)
 ![Agents](https://img.shields.io/badge/agents-Codex%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Gemini-2563eb.svg)
+![Core context](https://img.shields.io/badge/core_context-%E2%89%881k_tokens-7c3aed.svg)
+![Core size](https://img.shields.io/badge/core_size-4.1KB-0f766e.svg)
 
 > 简体中文说明: [README.zh-CN.md](README.zh-CN.md)
 
@@ -181,12 +183,16 @@ Suggested activation policy:
 
 Approximate context cost:
 
-- Core skill entry: small.
+- Core skill entry: about 4.1 KB source size, roughly 1k tokens by broad
+  English Markdown estimates.
 - Full reference set: moderate.
 - Examples: optional and should be loaded only when needed.
 
 This skill should not continuously occupy the model context unless explicitly
 invoked or configured by the user.
+
+Token estimates are approximate. Actual token usage depends on the agent,
+tokenizer, and loading policy.
 
 ## Durable Record Selection
 

@@ -3,6 +3,8 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Skill](https://img.shields.io/badge/skill-Codex%20Skill-111827.svg)
 ![Agents](https://img.shields.io/badge/agents-Codex%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Gemini-2563eb.svg)
+![Core context](https://img.shields.io/badge/core_context-%E2%89%881k_tokens-7c3aed.svg)
+![Core size](https://img.shields.io/badge/core_size-4.1KB-0f766e.svg)
 
 > English version: [README.md](README.md)
 
@@ -157,11 +159,13 @@ $agent-workflow-governance
 
 大致上下文成本：
 
-- 核心 Skill 入口：较小；
+- 核心 Skill 入口：源文件约 4.1 KB，按英文 Markdown 粗略估算约 1k tokens；
 - 完整 references：中等；
 - examples：可选，仅在需要示例时读取。
 
 这个 Skill 不应该长期、持续占用模型上下文，除非用户明确调用，或在项目中主动配置为默认工作流。
+
+Token 估算仅供参考。实际占用取决于具体 Agent、tokenizer 和加载策略。
 
 ## 使用流程
 
