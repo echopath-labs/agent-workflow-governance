@@ -89,25 +89,23 @@ Agent Workflow Governance 提供一套通用、克制、可复用的工作流护
 
 ## 30 秒开始
 
-克隆仓库：
+推荐使用一行命令安装：
 
 ```bash
-git clone https://github.com/echopath-labs/agent-workflow-governance.git
-cd agent-workflow-governance
+npx skills add https://github.com/echopath-labs/agent-workflow-governance --skill agent-workflow-governance
 ```
 
-把 Skill 链接到 Codex skills 目录：
+如果你想手动安装，可以直接克隆到 Codex skills 目录：
 
 ```bash
 mkdir -p ~/.codex/skills
-ln -s "$(pwd)/skills/agent-workflow-governance" ~/.codex/skills/agent-workflow-governance
+git clone https://github.com/echopath-labs/agent-workflow-governance.git ~/.codex/skills/agent-workflow-governance
 ```
 
-如果你不想使用软链接，也可以复制：
+已经安装过的话，可以这样更新：
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -R skills/agent-workflow-governance ~/.codex/skills/agent-workflow-governance
+git -C ~/.codex/skills/agent-workflow-governance pull
 ```
 
 安装后重启 Codex 会话，让 Codex 重新发现 Skill。
@@ -165,7 +163,7 @@ Skill 会引导 Agent 按以下顺序工作：
 
 如果仓库没有任何持久化记录系统，Agent 不应该静默初始化 OpenSpec、Spec Kit 或 ADR 目录。它应该先说明建议写到哪里、为什么写到那里，并等待用户确认。
 
-详细判断规则见 `skills/agent-workflow-governance/references/durable-record-decision.md`。
+详细判断规则见 `references/durable-record-decision.md`。
 
 ## 适合 / 不适合
 
@@ -198,16 +196,14 @@ Skill 会引导 Agent 按以下顺序工作：
 ## 仓库结构
 
 ```text
-skills/
-  agent-workflow-governance/
-    SKILL.md
-    agents/
-      openai.yaml
-    references/
-      durable-record-decision.md
-      git-lifecycle.md
-      impact-review.md
-      risk-and-context.md
+SKILL.md
+agents/
+  openai.yaml
+references/
+  durable-record-decision.md
+  git-lifecycle.md
+  impact-review.md
+  risk-and-context.md
 ```
 
 ### `SKILL.md`

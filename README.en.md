@@ -104,25 +104,24 @@ operations, use your project-specific checklist.
 
 ## Install
 
-Clone this repository:
+Recommended one-line install:
 
 ```bash
-git clone https://github.com/echopath-labs/agent-workflow-governance.git
-cd agent-workflow-governance
+npx skills add https://github.com/echopath-labs/agent-workflow-governance --skill agent-workflow-governance
 ```
 
-Copy or symlink the skill folder into your Codex skills directory:
+If you prefer manual installation, clone the repository directly into your Codex
+skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
-ln -s "$(pwd)/skills/agent-workflow-governance" ~/.codex/skills/agent-workflow-governance
+git clone https://github.com/echopath-labs/agent-workflow-governance.git ~/.codex/skills/agent-workflow-governance
 ```
 
-If you prefer copying instead of symlinking:
+If already installed, update with:
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -R skills/agent-workflow-governance ~/.codex/skills/agent-workflow-governance
+git -C ~/.codex/skills/agent-workflow-governance pull
 ```
 
 Restart your Codex session after installing the skill so it can be discovered.
@@ -176,7 +175,7 @@ OpenSpec, Spec Kit, or ADR directories. It should propose a target and reason,
 then wait for user confirmation.
 
 Detailed record-selection guidance lives in
-`skills/agent-workflow-governance/references/durable-record-decision.md`.
+`references/durable-record-decision.md`.
 
 ## Expected Agent Behavior
 
@@ -196,16 +195,14 @@ When the skill is active, an agent should:
 ## Repository Structure
 
 ```text
-skills/
-  agent-workflow-governance/
-    SKILL.md
-    agents/
-      openai.yaml
-    references/
-      durable-record-decision.md
-      git-lifecycle.md
-      impact-review.md
-      risk-and-context.md
+SKILL.md
+agents/
+  openai.yaml
+references/
+  durable-record-decision.md
+  git-lifecycle.md
+  impact-review.md
+  risk-and-context.md
 ```
 
 ### `SKILL.md`

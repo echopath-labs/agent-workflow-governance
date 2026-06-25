@@ -45,7 +45,7 @@ Keep the skill:
 
 Before opening a pull request, check:
 
-1. `skills/agent-workflow-governance/SKILL.md` has valid YAML frontmatter.
+1. `SKILL.md` has valid YAML frontmatter.
 2. `name` and `description` still clearly explain when the skill should trigger.
 3. `agents/openai.yaml` still matches the skill's purpose.
 4. New guidance does not introduce private team rules.
