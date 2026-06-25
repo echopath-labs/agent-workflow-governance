@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Workflow Governance"
+  short_description: "Workflow guardrails for AI-assisted engineering"
+  default_prompt: "Use $agent-workflow-governance to handle this engineering change with disciplined workspace boundary, durable records, git hygiene, impact review, and closeout."
