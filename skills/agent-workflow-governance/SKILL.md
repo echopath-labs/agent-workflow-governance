@@ -27,7 +27,7 @@ Durable records may be skipped for:
 - Short discussion where the user explicitly says not to implement yet.
 - Local scratch checks that do not change code, config, docs, deployment state, or project facts.
 
-If in doubt, create or update a focused durable record using the repository's existing system, such as OpenSpec, ADR, issue tracker, design doc, or project notes.
+If in doubt, propose a focused durable record using the repository's existing system, such as OpenSpec, ADR, issue tracker, design doc, or project notes. If no durable record system exists, do not initialize OpenSpec, Spec Kit, ADR directories, or issue structures silently. State the proposed target and reason, then wait for user confirmation.
 
 ## Required Workflow
 
@@ -37,7 +37,7 @@ If in doubt, create or update a focused durable record using the repository's ex
 4. Choose a branch deliberately. If new work starts from the repository's primary branch, remind the user to use a task branch before editing unless they explicitly want to continue on the current branch.
 5. Keep edits scoped to the task. Do not mix unrelated cleanup, formatting, or historical fixes.
 6. After changes, run focused validation and an existing-behavior impact review.
-7. Update durable records with outcome, evidence, risks, follow-ups, and relationship links when a durable record exists.
+7. Update durable records with outcome, evidence, risks, follow-ups, and relationship links when a durable record exists. Ask before introducing a new durable record system.
 8. Review human-facing docs. If the iteration changed workflow, API usage, release/build behavior, team rules, templates, or adoption guidance, update the short human-readable guide or explicitly record why no doc change is needed.
 9. Finish with a clear state: branch, commits, uncommitted files, durable record status, validation evidence, remaining risk, and whether the repository was safely restored to its primary branch.
 

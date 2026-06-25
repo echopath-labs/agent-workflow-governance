@@ -60,6 +60,51 @@ Durable records can stay lightweight or be skipped for:
 
 Decision rule: if a future teammate would struggle to understand the task without chat history, record it.
 
+## Which Record System To Use
+
+Prefer the repository's existing durable record system. Do not introduce a new
+system just because this skill knows about one.
+
+When multiple systems exist, choose by purpose:
+
+- Use OpenSpec for scoped product or engineering changes that need proposal,
+  design, task, requirement, acceptance-criteria, or spec evolution tracking.
+- Use Spec Kit or a constitution/spec-driven system when the repository already
+  uses it for project principles, specifications, and implementation planning.
+- Use ADRs for durable architecture or technical decisions, especially when the
+  important part is why one option was chosen over alternatives.
+- Use issue trackers for execution state, bugs, assignment, triage, priority,
+  milestones, and discussion that belongs with delivery management.
+- Use design docs for broad problem framing, tradeoff analysis, proposals, or
+  cross-team review before implementation.
+- Use runbooks for repeatable operational procedures, incident handling,
+  deployment checks, rollback steps, or environment-specific actions.
+- Use README or project notes for lightweight human-facing usage, setup,
+  migration, or adoption guidance.
+
+If no durable record system exists:
+
+- Do not initialize OpenSpec, Spec Kit, ADR directories, or issue structures
+  automatically.
+- Ask the user where durable context should live before creating a new system.
+- If the user wants the lightest option, recommend a small Markdown note or ADR
+  for decisions, and an issue or task list for execution state.
+- If the work is a structured feature or behavior change and the user wants a
+  specification workflow, offer OpenSpec or Spec Kit as options instead of
+  choosing silently.
+
+Before writing a durable record, state the proposed target and reason:
+
+```text
+Proposed durable record target: <system/path>
+Reason: <why this system fits the task>
+Please confirm before I create or update it.
+```
+
+If the user confirms a specific system, use it. If the user declines durable
+recording, keep the decision thread-scoped and mention the risk in the final
+handoff.
+
 ## Relationship Index Maintenance
 
 Treat durable records as a retrieval graph, not just a note pile.
