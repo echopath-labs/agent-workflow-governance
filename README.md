@@ -132,6 +132,8 @@ $agent-workflow-governance
 修改前先使用 Agent Workflow Governance，确认工作区归属、Git 状态和相关持久化记录。
 ```
 
+更多可直接复制的提示词见 [examples/](examples/)。
+
 ## 使用流程
 
 Skill 会引导 Agent 按以下顺序工作：
@@ -242,6 +244,11 @@ Codex Skill 列表和界面展示用的元数据。
 ## 贡献
 
 见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 路线图与版本
+
+- [ROADMAP.md](ROADMAP.md)
+- [CHANGELOG.md](CHANGELOG.md)
 
 ## 安全
 

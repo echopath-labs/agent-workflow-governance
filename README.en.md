@@ -150,6 +150,8 @@ Use Agent Workflow Governance before editing. First identify the owning workspac
 then check git status and relevant durable records.
 ```
 
+More copy-ready prompts are available in [examples/](examples/).
+
 The skill is designed to be lightweight. It does not force every small question
 through a heavyweight process. It applies when the task affects code, config,
 durable decisions, future teammates, customer-facing behavior, or long-term
@@ -261,6 +263,11 @@ and production rules in your private workspace.
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Roadmap And Versions
+
+- [ROADMAP.md](ROADMAP.md)
+- [CHANGELOG.md](CHANGELOG.md)
 
 ## Security
 
